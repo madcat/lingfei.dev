@@ -1,0 +1,127 @@
+---
+import Layout from "../layouts/Layout.astro"
+import icoExt from "../icons/external-link.svg"
+
+import img6 from "../assets/works/givenchy.gif"
+import img7 from "../assets/works/givenchy1.png"
+import img8 from "../assets/works/givenchy2.png"
+import img3 from "../assets/works/rd.gif"
+import img4 from "../assets/works/rd1.png"
+import img5 from "../assets/works/rd2.png"
+import img1 from "../assets/works/xtep.gif"
+import img2 from "../assets/works/xtep2.png"
+
+const URL_WORKS = "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS57kZJ7EpKERzBkTMvj26rs/edit?usp=sharing"
+---
+
+<Layout title='home'>
+  <main class='w-full min-h-full flex flex-col text-slate-800'>
+    <div class='flex-1 flex min-h-full max-w-full'>
+      <div class='flex flex-1 pt-64'>
+        <div class='w-full px-[4rem] font-mono flex flex-col'>
+          <div class='w-128 pb-16'>
+            <p class=''>Design & Build</p>
+            <p class=''>beautiful and useful things</p>
+            <br />
+            <p class=''>GMT+8 based but travels everywhere</p>
+
+            <p class=''></p>
+          </div>
+          <div class='py-8 w-48'>
+            <h2 class='font-bold text-xl font-serif'>Lingfei Song</h2>
+            <p class='text-xs'>hello@lingfei.dev</p>
+          </div>
+
+          <ul class='text-lg w-128 py-16'>
+            <li><a href='' class='hover:underline'>notes</a></li>
+            <li><a href='/about' class='hover:underline'>about</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class='w-full flex flex-[3] flex-col h-full pt-64'>
+        <div class='slider-wrapper border-l border-gray-200'>
+          <div class='slider'>
+            <div class='slider-card'>
+              <img src={img4.src} class='slider-card-img absolute w-[240px] margin-auto mr-[-400px] bottom-8' />
+              <img src={img5.src} class='slider-card-img absolute w-[240px] margin-auto ml-[-400px] bottom-8' />
+              <img src={img3.src} loading='lazy' class='slider-card-img w-[290px] z-10' />
+              <div class='slider-card-logo'></div>
+            </div>
+            <div class='slider-card'>
+              <img src={img2.src} class='slider-card-img w-[300px] absolute margin-auto mr-[-200px] top-[-18px]' />
+              <img src={img1.src} loading='lazy' class='slider-card-img ml-[-200px] mb-[-10%] z-10' />
+              <div class='slider-card-logo'></div>
+            </div>
+            <div class='slider-card'>
+              <img src={img7.src} class='slider-card-img absolute w-[240px] margin-auto mr-[-400px] bottom-8' />
+              <img src={img8.src} class='slider-card-img absolute w-[240px] margin-auto ml-[-400px] bottom-8' />
+              <img src={img6.src} loading='lazy' class='slider-card-img w-[320px] z-10' />
+              <div class='slider-card-logo'></div>
+            </div>
+          </div>
+          <div class='w-full flex pl-[48px] pt-8'>
+            <a href={URL_WORKS} target='_blank' class='hover:underline text-slate-500 block flex items-center leading-none'>more client works<img src={icoExt.src} class='ml-2 inline w-4 h-4' /></a>
+          </div>
+        </div>
+        <div class='w-full pl-[48px] pt-32'>
+          <p>©Lingfei Song 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      * {
+      }
+      .slider-wrapper {
+        width: 100%;
+      }
+      .slider {
+        display: flex;
+        gap: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        scroll-padding-left: 30px;
+        scroll-padding-right: 30px;
+      }
+      .slider-inner {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 1500px;
+        height: 500px;
+        display: inline-flex;
+      }
+      .slider-card {
+        scroll-snap-align: start;
+        flex: 1 1 100%;
+
+        width: calc(100% - 30px);
+        min-width: calc(100% - 30px);
+        height: 500px;
+        border-radius: 18px;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-image: url("../assets/bg1.png");
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+      }
+      .slider-card-img {
+        box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.09);
+        border-radius: 12px;
+      }
+      .slider-card-logo {
+        position: absolute;
+        width: 200px;
+        heigth: 50px;
+        background-color: rgb(55, 50, 50);
+      }
+    </style>
+  </main>
+</Layout>
