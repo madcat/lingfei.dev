@@ -1,0 +1,3 @@
+- mobile layout
+- about copy
+- notes list
