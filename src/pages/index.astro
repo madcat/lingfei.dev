@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro"
 import icoExt from "../icons/external-link.svg"
 
+import { Image } from "astro:assets"
+
 import img6 from "../assets/works/givenchy.gif"
 import img7 from "../assets/works/givenchy1.png"
 import img8 from "../assets/works/givenchy2.png"
@@ -42,20 +44,20 @@ const URL_WORKS = "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS
         <div class='slider-wrapper border-l border-gray-200'>
           <div class='slider'>
             <div class='slider-card'>
-              <img src={img4.src} class='slider-card-img absolute w-[240px] margin-auto mr-[-400px] bottom-8' />
-              <img src={img5.src} class='slider-card-img absolute w-[240px] margin-auto ml-[-400px] bottom-8' />
-              <img src={img3.src} loading='lazy' class='slider-card-img w-[290px] z-10' />
+              <Image src={img4} class='slider-card-img absolute w-[240px] margin-auto mr-[-400px] bottom-8' alt='roger dubuis project screenshot' />
+              <Image src={img5} class='slider-card-img absolute w-[240px] margin-auto ml-[-400px] bottom-8' alt='roger dubuis project screenshot' />
+              <Image src={img3} loading='lazy' class='slider-card-img w-[290px] z-10' alt='roger dubuis project clip' />
               <div class='slider-card-logo'></div>
             </div>
             <div class='slider-card'>
-              <img src={img2.src} class='slider-card-img w-[300px] absolute margin-auto mr-[-200px] top-[-18px]' />
-              <img src={img1.src} loading='lazy' class='slider-card-img ml-[-200px] mb-[-10%] z-10' />
+              <Image src={img2} class='slider-card-img w-[300px] absolute margin-auto mr-[-200px] top-[-18px]' alt='xtep project screenshot' />
+              <Image src={img1} loading='lazy' class='slider-card-img ml-[-200px] mb-[-10%] z-10' alt='xtep project clip' />
               <div class='slider-card-logo'></div>
             </div>
             <div class='slider-card'>
-              <img src={img7.src} class='slider-card-img absolute w-[240px] margin-auto mr-[-400px] bottom-8' />
-              <img src={img8.src} class='slider-card-img absolute w-[240px] margin-auto ml-[-400px] bottom-8' />
-              <img src={img6.src} loading='lazy' class='slider-card-img w-[320px] z-10' />
+              <Image src={img7} class='slider-card-img absolute w-[240px] margin-auto mr-[-400px] bottom-8' alt='givenchy project screenshot' />
+              <Image src={img8} class='slider-card-img absolute w-[240px] margin-auto ml-[-400px] bottom-8' alt='givenchy project screenshot' />
+              <Image src={img6} loading='lazy' class='slider-card-img w-[320px] z-10' alt='givenchy project clip' />
               <div class='slider-card-logo'></div>
             </div>
           </div>
@@ -107,7 +109,7 @@ const URL_WORKS = "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS
         justify-content: center;
         align-items: center;
         color: white;
-        background-image: url("../assets/bg1.png");
+        background-image: url("../assets/bg1.jpg");
         background-size: cover;
         overflow: hidden;
         position: relative;
