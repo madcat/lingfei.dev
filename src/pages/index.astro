@@ -75,7 +75,8 @@ const URLS = {
           <section class='pl-[--pad] prose w-full py-8'>
             <h3 class=''>Web tool to convert black shapes in image to dotted pattern:</h3>
             <a href={URLS.img2dots} target=' __blank' class='underline'>OPEN</a>
-            <p><Image src={img2dotsInput} loading='lazy' class='w-[128px] inline' alt='image to dotted pattern input' /> to <Image src={img2dotsOutput} loading='lazy' class='w-[128px] inline' alt='image to dotted pattern output' /></p>
+            <p><Image src={img2dotsInput} loading='lazy' class='w-[128px] m-0 inline' alt='image to dotted pattern input' /> to <Image src={img2dotsOutput} loading='lazy' class='w-[128px] inline m-0' alt='image to dotted pattern output' /></p>
+            <p class='text-muted'>built with Three.js</p>
           </section>
           <hr />
         </div>
@@ -88,6 +89,10 @@ const URLS = {
     <style>
       * {
         --pad: 30px;
+        --muted: 240 3.8% 46.1%;
+      }
+      .text-muted {
+        color: hsl(var(--muted));
       }
       .slider-wrapper {
         width: 100%;
