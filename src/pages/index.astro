@@ -13,7 +13,14 @@ import img5 from "../assets/works/rd2.png"
 import img1 from "../assets/works/xtep.gif"
 import img2 from "../assets/works/xtep2.png"
 
+import img2dotsInput from "../assets/img2dots/input.png"
+import img2dotsOutput from "../assets/img2dots/output.png"
+
 const URL_WORKS = "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS57kZJ7EpKERzBkTMvj26rs/edit?usp=sharing"
+const URLS = {
+  works: "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS57kZJ7EpKERzBkTMvj26rs/edit?usp=sharing",
+  img2dots: "https://img2dots.vercel.app/",
+}
 ---
 
 <Layout title='home'>
@@ -61,9 +68,16 @@ const URL_WORKS = "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS
               <div class='slider-card-logo'></div>
             </div>
           </div>
-          <div class='w-full flex pl-[48px] pt-8'>
-            <a href={URL_WORKS} target='_blank' class='hover:underline text-slate-500 block flex items-center leading-none'>more client works<img src={icoExt.src} class='ml-2 inline w-4 h-4' /></a>
+          <div class='w-full flex pl-[48px] py-8'>
+            <a href={URLS.works} target='_blank' class='hover:underline text-slate-500 block flex items-center leading-none'>more client works<img src={icoExt.src} class='ml-2 inline w-4 h-4' /></a>
           </div>
+          <hr />
+          <section class='pl-[--pad] prose w-full py-8'>
+            <h3 class=''>Web tool to convert black shapes in image to dotted pattern:</h3>
+            <a href={URLS.img2dots} target=' __blank' class='underline'>OPEN</a>
+            <p><Image src={img2dotsInput} loading='lazy' class='w-[128px] inline' alt='image to dotted pattern input' /> to <Image src={img2dotsOutput} loading='lazy' class='w-[128px] inline' alt='image to dotted pattern output' /></p>
+          </section>
+          <hr />
         </div>
         <div class='w-full pl-[48px] pt-8 pb-8'>
           <p>©Lingfei Song 2024</p>
@@ -73,6 +87,7 @@ const URL_WORKS = "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS
 
     <style>
       * {
+        --pad: 30px;
       }
       .slider-wrapper {
         width: 100%;
