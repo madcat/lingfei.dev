@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro"
-const { frontmatter } = Astro.props
+const { frontmatter, title } = Astro.props
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={(frontmatter && frontmatter.title) || title}>
   <main class='w-full min-h-full flex flex-col text-slate-800'>
     <div class='flex-1 flex min-h-full max-w-full'>
       <div class='flex flex-1 pt-32'>
@@ -23,7 +23,7 @@ const { frontmatter } = Astro.props
         <article class='prose max-w-[48rem]'>
           <slot />
         </article>
-        <div class='w-full py-32'>
+        <div class='w-full py-24'>
           <p>©Lingfei Song 2024</p>
         </div>
       </div>

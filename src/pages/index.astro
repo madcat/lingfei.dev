@@ -16,7 +16,8 @@ import img2 from "../assets/works/xtep2.png"
 import img2dotsInput from "../assets/img2dots/input.png"
 import img2dotsOutput from "../assets/img2dots/output.png"
 
-const URL_WORKS = "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS57kZJ7EpKERzBkTMvj26rs/edit?usp=sharing"
+import globeThumb from "../assets/globe/globe-thumb.png"
+
 const URLS = {
   works: "https://docs.google.com/presentation/d/1YUKaY14XId85CGFYnBPoS57kZJ7EpKERzBkTMvj26rs/edit?usp=sharing",
   img2dots: "https://img2dots.vercel.app/",
@@ -48,8 +49,8 @@ const URLS = {
         </div>
       </div>
       <div class='w-full flex flex-[3] flex-col h-full pt-32'>
-        <div class='slider-wrapper border-l border-gray-200'>
-          <div class='slider'>
+        <div class='w-full'>
+          <div class='slider border-l border-gray-200'>
             <div class='slider-card'>
               <Image src={img4} class='slider-card-img absolute w-[240px] margin-auto mr-[-400px] bottom-8' alt='roger dubuis project screenshot' />
               <Image src={img5} class='slider-card-img absolute w-[240px] margin-auto ml-[-400px] bottom-8' alt='roger dubuis project screenshot' />
@@ -71,79 +72,79 @@ const URLS = {
           <div class='w-full flex pl-[48px] py-8'>
             <a href={URLS.works} target='_blank' class='hover:underline text-slate-500 block flex items-center leading-none'>more client works<img src={icoExt.src} class='ml-2 inline w-4 h-4' /></a>
           </div>
-          <hr />
-          <section class='pl-[--pad] prose w-full py-8'>
-            <h3 class=''>Web tool to convert black shapes in image to dotted pattern:</h3>
-            <a href={URLS.img2dots} target=' __blank' class='underline'>OPEN</a>
-            <p><Image src={img2dotsInput} loading='lazy' class='w-[128px] m-0 inline' alt='image to dotted pattern input' /> to <Image src={img2dotsOutput} loading='lazy' class='w-[128px] inline m-0' alt='image to dotted pattern output' /></p>
-            <p class='text-muted'>built with Three.js</p>
-          </section>
-          <hr />
         </div>
-        <div class='w-full pl-[48px] pt-8 pb-8'>
+        <section class='pl-[--pad] prose w-full py-8'>
+          <h3 class=''><a href={URLS.img2dots} target=' __blank' class='underline'>Create dot pattern from shapes</a></h3>
+          <p><Image src={img2dotsInput} loading='lazy' class='shadow-lg w-[128px] m-0 inline' alt='image to dotted pattern input' /> to <Image src={img2dotsOutput} loading='lazy' class='shadow-lg w-[128px] inline m-0' alt='image to dotted pattern output' /></p>
+          <p class='text-muted mt-[-16px]'>built with Three.js</p>
+        </section>
+        <section class='pl-[--pad] prose w-full py-8'>
+          <h3 class=''><a href='/webgl-globe'>Interactive WebGL Globe</a></h3>
+          <p><Image src={globeThumb} loading='lazy' class='shadow-lg w-[400px] m-0' alt='WebGL globe demo' /></p>
+          <p class='text-muted mt-[-16px]'>built with Three.js</p>
+        </section>
+
+        <div class='w-full pl-[--pad] py-8'>
           <p>©Lingfei Song 2024</p>
         </div>
       </div>
     </div>
-
-    <style>
-      * {
-        --pad: 30px;
-        --muted: 240 3.8% 46.1%;
-      }
-      .text-muted {
-        color: hsl(var(--muted));
-      }
-      .slider-wrapper {
-        width: 100%;
-      }
-      .slider {
-        display: flex;
-        gap: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
-        width: 100%;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        scroll-padding-left: 30px;
-        scroll-padding-right: 30px;
-      }
-      .slider-inner {
-        padding-left: 30px;
-        padding-right: 30px;
-        width: 1500px;
-        height: 500px;
-        display: inline-flex;
-      }
-      .slider-card {
-        scroll-snap-align: start;
-        flex: 1 1 100%;
-
-        width: calc(100% - 30px);
-        min-width: calc(100% - 30px);
-        height: 500px;
-        border-radius: 18px;
-        background: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        background-image: url("../assets/bg1.jpg");
-        background-size: cover;
-        overflow: hidden;
-        position: relative;
-      }
-      .slider-card-img {
-        box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.09);
-        border-radius: 12px;
-      }
-      .slider-card-logo {
-        position: absolute;
-        width: 200px;
-        heigth: 50px;
-        background-color: rgb(55, 50, 50);
-      }
-    </style>
   </main>
+  <style>
+    * {
+      --pad: 30px;
+      --muted: 240 3.8% 46.1%;
+    }
+    .text-muted {
+      color: hsl(var(--muted));
+    }
+
+    .slider {
+      display: flex;
+      gap: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      scroll-padding-left: 30px;
+      scroll-padding-right: 30px;
+    }
+    .slider-inner {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 1500px;
+      height: 500px;
+      display: inline-flex;
+    }
+    .slider-card {
+      scroll-snap-align: start;
+      flex: 1 1 100%;
+
+      width: calc(100% - 30px);
+      min-width: calc(100% - 30px);
+      height: 500px;
+      border-radius: 18px;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-image: url("../assets/bg1.jpg");
+      background-size: cover;
+      overflow: hidden;
+      position: relative;
+    }
+    .slider-card-img {
+      box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.09);
+      border-radius: 12px;
+    }
+    .slider-card-logo {
+      position: absolute;
+      width: 200px;
+      heigth: 50px;
+      background-color: rgb(55, 50, 50);
+    }
+  </style>
 </Layout>

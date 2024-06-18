@@ -1,0 +1,23 @@
+---
+import NoteLayout from "../layouts/NoteLayout.astro"
+import Globe from "../components/globe/Globe.astro"
+---
+
+<NoteLayout title='3D Globe'>
+  <h1>3D Globe</h1>
+  <p>This is from a client project. Navigate to different sections based on location on the globe.</p>
+  <p>Customize the parameters from the control upper right:</p>
+  <p>
+    <ul>
+      <li>continient borders opacity</li>
+      <li>country borders opacity</li>
+      <li>dot size</li>
+      <li>etc.</li>
+    </ul>
+  </p>
+  <p>Clickable locations are configured in the code.</p>
+  <p>Interactions: drag to rotate, pinch to zoom</p>
+  <p class='w-full aspect-square' '>
+    <Globe class='h-[400px]' />
+  </p>
+</NoteLayout>
