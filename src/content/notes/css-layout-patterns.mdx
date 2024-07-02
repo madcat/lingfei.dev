@@ -1,0 +1,26 @@
+---
+title: "my CSS layout patterns"
+pubDate: 2024-07-01
+description: ""
+author: "Lingfei Song"
+tags: ["web dev", "css", ""]
+---
+
+import { Code } from "astro:components"
+import code2 from "./css-layout-patterns-snippets/p1.html?raw"
+
+## CSS Layout Patterns
+
+An experienced web developer might still often came into annoying moments when doing CSS layout when some details are just not working as intended.
+
+Here I collected some common CSS layout patterns, with notes on related fundamental concepts.
+
+Most layouts are based on flexbox and grid.
+
+### sidebar and content
+
+<Code code={code2} lang='html' theme='dark-plus' />
+<Fragment set:html={code2} />
+
+_TODO: side note on the right_
+_TODO: use iframe that is resizable to simulate responsiveness_

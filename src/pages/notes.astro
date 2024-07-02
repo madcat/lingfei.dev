@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content"
+import NoteLayout from "../layouts/NoteLayout.astro"
+const notes = await getCollection("notes")
+---
+
+<NoteLayout title='all notes'>
+  <p>Notes</p>
+  <ul>
+    <li>{notes.map((n) => <a href={"/notes/" + n.slug}>{n.data.title}</a>)}</li>
+  </ul>
+</NoteLayout>
